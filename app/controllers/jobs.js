@@ -16,19 +16,16 @@ const spec = require('../spec');
  *       200:
  *         description: Describe general API information
  */
-exports.getApiInfo = ctx => {
-  // BUSINESS LOGIC
-  const data = {
-    name: pkginfo.name,
-    version: pkginfo.version,
-    description: pkginfo.description,
-    author: pkginfo.author
-  };
+exports.getAll = ctx => {
+  return ctx.app.pool.query(`SELECT * FROM jobs`)
+    .then((res) => {
+      return ctx.res.ok({
+        data: res.rows
+      });
+    })
+    .catch(err => console.error('Error executing query', err.stack))
 
-  return ctx.res.ok({
-    data,
-    message: 'Hello, API!'
-  });
+  //return ctx.app.pool.query('SELECT * FROM jobs');
 };
 
 /**

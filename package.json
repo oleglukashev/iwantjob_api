@@ -51,19 +51,24 @@
     "bunyan": "^1.8.12",
     "dotenv": "^6.0.0",
     "elastic-apm-node": "^1.8.3",
+    "ioredis": "^4.9.0",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.4.0",
+    "node-cron": "^2.0.3",
+    "node-resque": "^5.5.3",
     "swagger-jsdoc": "^3.0.2",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
+    "db-migrate-pg": "^0.5.0",
     "eslint": "^5.2.0",
     "eslint-config-kasa": "^0.1.0",
     "jest": "^23.4.2",
     "jest-junit": "^5.1.0",
     "nodemon": "^1.18.3",
+    "pg": "^7.9.0",
     "supertest": "^3.0.0"
   },
   "jest": {

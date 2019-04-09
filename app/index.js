@@ -15,6 +15,7 @@ const logger = require('./logger');
 const requestId = require('./middlewares/requestId');
 const responseHandler = require('./middlewares/responseHandler');
 const router = require('./routes');
+const pool = require('./services/pgconnection');
 
 
 const app = new Koa();
@@ -30,6 +31,9 @@ app.use(
     jsonLimit: '10mb'
   })
 );
+
+app.pool = pool;
+
 app.use(requestId());
 app.use(
   cors({

@@ -1,0 +1,11 @@
+{
+  "dev": {
+    "driver": "pg",
+    "user": "oleg",
+    "password": "",
+    "host": "localhost",
+    "database": "iwantjob_dev",
+    "schema": "my_schema",
+    "port": 5432
+  }
+}
